@@ -7,10 +7,45 @@
     <title>天刀梦之队</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="indexBg">
     <div class="header">
         <img src="./images/logo.png" alt="">
     </div>
+    <div class="star comet"></div>
+
+    
     如果没有梦想，和咸鱼有什么分别？
+    <audio id="player" controls="controls" autoplay="autoplay" loop="loop">
+        <source src="music.mp3"/>
+    </audio>
 </body>
 </html>
+
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+    $(document).click(function(){
+        playMusic();
+    })
+})
+function playMusic() {
+    var player = $("#player")[0]; /*jquery对象转换成js对象*/
+    if (player.paused){ /*如果已经暂停*/
+        player.play(); /*播放*/
+    }
+}
+var wH = window.innerHeight;
+var wW = window.innerWidth;
+
+var generateStars = function generateStars(n) {
+  for (var i = 0; i < n; i++) {
+    var div = document.createElement('div');
+    div.className = i % 20 == 0 ? 'star star--big' : i % 9 == 0 ? 'star star--medium' : 'star';
+    // random everywhere!
+    div.setAttribute('style', 'top:' + Math.round(Math.random() * wH) + 'px;left:' + Math.round(Math.random() * wW) + 'px;animation-duration:' + (Math.round(Math.random() * 3000) + 3000) + 'ms;animation-delay:' + Math.round(Math.random() * 3000) + 'ms;');
+    document.body.appendChild(div);
+  }
+};
+
+generateStars(150);
+</script>
