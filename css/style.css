@@ -354,15 +354,18 @@
 
 
   /* main */
+  *{
+      box-sizing: border-box;
+  }
   html,body{
       width: 100%;
       height: 100%;
       cursor:url('../images/click.ico'),auto;
-      overflow: hidden;
   }
   .indexBg{
       background: url(../images/bg.jpg) no-repeat center center;
       background-size: cover;
+      overflow: hidden;
   }
   .header{
       width: 100%;
@@ -576,4 +579,97 @@
 }
 .fullMode > div:hover .wrapperSon.ntd3{
     right: 0;
+}
+
+.listBg{
+    background: url(../images/listBg.jpg) no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+.fuben-logo{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 58px;
+    margin-top: 36px;
+}
+.list-content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    margin-left: -520px;
+    width: 1100px;
+    height: 600px;
+    padding: 40px;
+    background: url(../images/listContent.png) no-repeat center center;
+    background-size: cover;
+    margin-top: 36px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+    font-size: 14px;
+}
+a{
+    text-decoration: none;
+}
+.list-ul{
+    overflow: auto;
+    scroll-behavior: smooth;
+    height: 510px;
+}
+.list-ul li{
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px dashed #ccc;
+}
+.list-ul li:last-child{
+    border-bottom: 0;
+}
+.list-ul span{
+    float: right;
+    color: #666;
+}
+.list-ul a{
+    float: left;
+    color: #3e3a39;
+    position: relative;
+    padding-left: 30px;
+}
+.list-ul a:before {
+    content: '';
+    background: url(../images/listIco.png);
+    width: 20px;
+    height: 9px;
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+.list-ul li em{
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+    transform: translate(-50%);
+}
+li:hover em{
+    animation: test 0.4s ease;
+    border: 1px solid #ccc;
+    width: 100%; 
+}
+
+@keyframes test {
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 100%;
+    }
 }
