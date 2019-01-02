@@ -673,3 +673,44 @@ li:hover em{
         width: 100%;
     }
 }
+
+.detailBg{
+    background: #fbfbfb;
+}
+.fixImg{
+    width: 100px;
+    position: fixed;
+    top: 80px;
+    left: 20px;
+}
+.detail-content{
+    margin: 24px auto 50px auto;
+    width: 1136px;
+    background: #fff;
+    border: 1px solid #efefef;
+    padding: 10px 20px 20px 20px;
+}
+.detail-content h1{
+    text-align: center;
+    color: #2fc3a3;
+    font-size: 28px;
+    height: 1.1em;
+    line-height: 1.1em;
+    margin-bottom: 12px;
+    font-weight: 400;
+    
+}
+.detail-content h2{
+    font-size: 12px;
+    color: #999;
+    font-weight: normal;
+    text-align: center;
+    border-bottom: 1px dashed #efefef;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+#text p{
+    font-size: 16px;
+    margin-top: 1.5em;
+    line-height: 1.5em;
+}
