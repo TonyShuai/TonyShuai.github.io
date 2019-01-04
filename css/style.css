@@ -753,3 +753,19 @@ li:hover em{
     justify-content: center;
     align-items: center;
 }
+.title-next{
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.hotMod{
+  margin: 0 32px;
+  padding: 20px;
+  background: #f2dede;
+  color: #a94442;
+  border: 1px solid #ebccd1;
+}
+.hotMod p{
+  font-size: 14px;
+}
